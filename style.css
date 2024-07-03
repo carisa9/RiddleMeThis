@@ -1,0 +1,257 @@
+@font-face {
+  font-family: coco;
+  src: url(fonts/Typo_Round_Bold_Demo.otf);
+}
+
+@font-face {
+  font-family: anti;
+  src: url(fonts/AntipastoPro-DemiBold_trial.ttf);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+.banner {
+  width: 100%;
+    background-color: rgb(249, 129, 177);
+    color: white;
+    border: 2px solid  rgb(173, 0, 107);
+    text-align: center;
+    padding: 37px 0px 0px;
+    position: fixed;
+    top: -74px;
+    font-family: coco;
+    font-size: 41px;
+    text-shadow: 5px 6px 1px rgb(230, 34, 119);
+}
+
+#hint-button {
+  padding: 15px 35px;
+  font-size: 25px;
+  background-color: rgb(249, 129, 177);
+  color: white;
+  border: 4px solid #f64e8e;
+  cursor: pointer;
+  text-shadow: 4px 1px 1px rgb(230, 34, 119);
+  border-radius: 7px;
+  font-family: coco;
+
+}
+
+#hint-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 300px;
+  z-index: 1000; 
+  display: none; 
+  font-family: coco;
+}
+
+#hint-popup.visible {
+  display: block;
+}
+
+#close-hint {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+
+.button {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#banner-links {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  top: 143px;
+  left: auto;
+  text-shadow: 4px 1px 1px rgb(230, 34, 119);
+}
+
+.banner-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 23px;
+  font-family: coco;
+}
+
+#settings-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 23px;
+  font-family: coco;
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px; 
+}
+
+#input-boxes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+ 
+}
+
+input[type="text"] {
+  width: 80px;
+  height: 80px;
+  margin: 2px;
+  text-align: center;
+  font-size: 40pt;
+  border: 5px solid #f64e8e;
+  border-radius: 8px;
+  font-family:coco ;
+}
+
+
+#riddle {
+  font-size: 40px;
+  margin-bottom: 20px;
+ 
+}
+
+#submit-btn {
+  padding: 15px 35px;
+  font-size: 25px;
+  background-color: rgb(249, 129, 177);
+  color: white;
+  border: 4px solid #f64e8e;
+  cursor: pointer;
+  border-radius: 7px;
+  font-family: coco;
+  text-shadow: 4px 1px 1px rgb(230, 34, 119);
+}
+
+#reveal-letter-btn {
+  padding: 15px 35px;
+  font-size: 25px;
+  background-color: rgb(249, 129, 177);
+  color: white;
+  border: 4px solid #f64e8e;
+  cursor: pointer;
+  text-shadow: 4px 1px 1px rgb(230, 34, 119);
+  border-radius: 7px;
+  font-family: coco;
+}
+
+#reveal-letter-btn:hover {
+  background-color: #f64e8e;
+}
+
+#submit-btn:hover {
+  background-color: #f64e8e;
+}
+
+#hint-button:hover {
+  background-color: #f64e8e;
+}
+
+
+#tries-counter {
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: coco;
+}
+
+
+#hint-text {
+  margin-top: 20px;
+  font-size: 16px;
+  display: none;
+  font-family: coco;
+}
+
+.hidden {
+  display: none;
+}
+
+#streak-box {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 200px;
+  right: 25px;
+  border: 4px solid #f64e8e;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(249, 129, 177);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  font-family: coco;
+  text-shadow: 2px 1px 1px rgb(230, 34, 119);
+}
+
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+#settings-menu {
+  position: fixed;
+  top: 277px;
+  right: 570px;
+  background-color: white;
+  border: 6px solid #d93689;
+  padding: 85px;
+  z-index: 1001;
+  font-size: 30px;
+  font-family: coco;
+}
+
+#settings-menu a {
+  display: block;
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+#close-settings {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  padding-right: 8px;
+  color: #d93689;
+  font-family: coco;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="banner">
+        <h1>Riddle Me This</h1>
+    </div>
+    <div id="banner-links">
+      
+      <a href="https://www.instagram.com/minutecryptic/" target="_blank" class="banner-link">MinuteCryptic</a>
+      <a href="https://www.thesaturdaypaper.com.au/puzzles" target="_blank" class="banner-link">The Saturday Paper</a>
+      <a href="#" id="settings-link">Settings</a>
+      <audio id="background-music" src="audio/carefully-does-it-176848.mp3" autoplay loop></audio>
+    
+
+    <div id="settings-menu" class="hidden">
+      <div id="close-settings">x</div>
+      <a href="#" id="play-music">Play Music</a>
+      <a href="#" id="stop-music">Stop Music</a>
+  </div>
+  </div>
+    <div class="container">
+        <div id="input-boxes">
+            <!-- Input boxes will be generated here -->
+        </div>
+        <div id="riddle"> </div>
+        <button id="hint-button">Hint</button>
+        <button id="submit-btn">Check Answer</button>
+        <button id="reveal-letter-btn">Reveal Letter</button>
+        <div id="tries-counter">Tries until streak lost: 3</div>
+        <div id="hint-popup" class="hidden">
+            <div id="hint-content"></div>
+            <div id="close-hint">x</div>
+    </div>
+    <div id="streak-box">Streak: 0</div>
+
+    <audio id="correct-sound" src="audio/win1.mp3"></audio>
+    <audio id="wrong-sound" src="audio/wring1.mp3"></audio>
+    
+
+</body>
+</html>
